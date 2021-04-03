@@ -1,4 +1,4 @@
-import { TestBed, async } from "@angular/core/testing";
+import { TestBed, waitForAsync } from "@angular/core/testing";
 import { FooterComponent } from "./footer.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { UserService } from "../user/user.service";
@@ -7,7 +7,7 @@ import { of } from "rxjs";
 describe("O componente Footer", () => {
   let component: FooterComponent;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       providers: [UserService],

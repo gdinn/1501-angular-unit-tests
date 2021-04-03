@@ -1,4 +1,4 @@
-import { async, TestBed } from "@angular/core/testing";
+import { TestBed, waitForAsync } from "@angular/core/testing";
 import { HeaderComponent } from "./header.component";
 import { UserService } from "../user/user.service";
 import { RouterTestingModule } from "@angular/router/testing";
@@ -13,7 +13,7 @@ describe("O componente Header", () => {
   let userService: UserService;
   let router: Router;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent],
       providers: [UserService],

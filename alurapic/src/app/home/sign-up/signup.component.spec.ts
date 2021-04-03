@@ -1,4 +1,4 @@
-import { async, TestBed } from "@angular/core/testing";
+import { TestBed, waitForAsync } from "@angular/core/testing";
 import { SignUpComponent } from "./signup.component";
 import { SignUpService } from "./signup.service";
 import { UserNotTakenValidatorService } from "./user-not-taken.validator.service";
@@ -14,7 +14,7 @@ describe("O formulário SignUp", () => {
   let router: Router;
   let signupService: SignUpService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [SignUpComponent],
       providers: [SignUpService, UserNotTakenValidatorService],
