@@ -27,8 +27,8 @@ describe("O componente Header", () => {
   }));
 
   beforeEach(() => {
-    userService = TestBed.get(UserService);
-    router = TestBed.get(Router);
+    userService = TestBed.inject(UserService);
+    router = TestBed.inject(Router);
 
     spyOn(userService, "getUser").and.returnValue(
       of({

@@ -16,9 +16,9 @@ describe("O serviço AuthService", () => {
       imports: [HttpClientTestingModule],
       providers: [AuthService]
     });
-    service = TestBed.get(AuthService);
-    httpMock = TestBed.get(HttpTestingController);
-    userService = TestBed.get(UserService);
+    service = TestBed.inject(AuthService);
+    httpMock = TestBed.inject(HttpTestingController);
+    userService = TestBed.inject(UserService);
   });
 
   it("deve ser instanciado", () => {

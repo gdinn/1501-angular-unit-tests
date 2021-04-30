@@ -28,8 +28,8 @@ describe("O formulário SignUp", () => {
   }));
 
   beforeEach(() => {
-    router = TestBed.get(Router);
-    signupService = TestBed.get(SignUpService);
+    router = TestBed.inject(Router);
+    signupService = TestBed.inject(SignUpService);
     const fixture = TestBed.createComponent(SignUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

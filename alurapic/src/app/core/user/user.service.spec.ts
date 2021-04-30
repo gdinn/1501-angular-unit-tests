@@ -1,5 +1,4 @@
 import { UserService } from "./user.service";
-import { TokenService } from "../token/token.service";
 import { TestBed } from "@angular/core/testing";
 
 describe("O serviço UserService", () => {
@@ -9,7 +8,7 @@ describe("O serviço UserService", () => {
     TestBed.configureTestingModule({
       providers: [UserService]
     });
-    service = TestBed.get(UserService);
+    service = TestBed.inject(UserService);
   });
 
   it("deve ser instanciado", () => {

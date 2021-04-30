@@ -16,7 +16,7 @@ describe("O componente Footer", () => {
   }));
 
   beforeEach(() => {
-    const userService = TestBed.get(UserService);
+    const userService = TestBed.inject(UserService);
 
     spyOn(userService, "getUser").and.returnValue(
       of({
